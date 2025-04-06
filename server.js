@@ -9,7 +9,7 @@ const USERS_FILE = path.join(__dirname, 'data', 'users.json');
 
 // Middleware
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static('public')); // Make sure your HTML/CSS/JS are in the 'public' folder
 
 // Load users
 const loadUsers = () => {
@@ -41,13 +41,13 @@ app.post('/login', (req, res) => {
 // Register Endpoint
 app.post('/register', (req, res) => {
     const { name, mobile, address, username, password, confirmPassword } = req.body;
-    
+
     if (password !== confirmPassword) {
         return res.json({ success: false, message: "Passwords do not match" });
     }
 
     const users = loadUsers();
-    
+
     if (users.find(u => u.username === username)) {
         return res.json({ success: false, message: "Username already exists" });
     }
@@ -58,4 +58,7 @@ app.post('/register', (req, res) => {
     res.json({ success: true });
 });
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+// 🟢 IMPORTANT: Listen on 0.0.0.0 so external clients can connect
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`✅ Server running on http://0.0.0.0:${PORT}`);
+});
