@@ -4,12 +4,12 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 const app = express();
-const PORT = 80; // Use 80 for public access (you can use 3000 locally)
+const PORT = 3000; // ✅ Changed to 3000
 const USERS_FILE = path.join(__dirname, 'data', 'users.json');
 
 // Middleware
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'mayo'))); // ✅ Serve from mayo folder
+app.use(express.static(path.join(__dirname, 'mayo'))); // ✅ Serves static files from mayo folder
 
 // Load users
 const loadUsers = () => {
@@ -41,13 +41,13 @@ app.post('/login', (req, res) => {
 // Register Endpoint
 app.post('/register', (req, res) => {
     const { name, mobile, address, username, password, confirmPassword } = req.body;
-    
+
     if (password !== confirmPassword) {
         return res.json({ success: false, message: "Passwords do not match" });
     }
 
     const users = loadUsers();
-    
+
     if (users.find(u => u.username === username)) {
         return res.json({ success: false, message: "Username already exists" });
     }
@@ -58,7 +58,7 @@ app.post('/register', (req, res) => {
     res.json({ success: true });
 });
 
-// Start server
+// Start server on 3000
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server is running at http://0.0.0.0:${PORT}`);
+    console.log(`✅ Server running at http://0.0.0.0:${PORT}`);
 });
