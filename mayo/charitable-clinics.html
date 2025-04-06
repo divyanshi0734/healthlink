@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charitable Clinics - HealthLink</title>
+  <link rel="stylesheet" href="clinic.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">HealthLink</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resource.html">Resources</a></li>
+        <li><a href="govt-schemes.html">Schemes</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Charitable Clinics in Gwalior</h1>
+    <p>Discover healthcare services available for all in need.</p>
+  </section>
+
+  <section class="clinics-section" id="clinics"></section>
+
+  <footer>
+    <p>&copy; 2025 HealthLink. All rights reserved.</p>
+  </footer>
+
+  <script>
+    fetch('gwalior_charitable_clinics.json')
+      .then(response => response.json())
+      .then(data => {
+        const clinicsContainer = document.getElementById('clinics');
+        data.forEach(clinic => {
+          const clinicCard = document.createElement('div');
+          clinicCard.className = 'clinic-card';
+          clinicCard.innerHTML = `
+            <h3>${clinic.name}</h3>
+            <p>${clinic.description}</p>
+            <p><strong>Location:</strong> ${clinic.location}</p>
+            <p><strong>Website:</strong> <a href="${clinic.website}" target="_blank">${clinic.website}</a></p>
+          `;
+          clinicsContainer.appendChild(clinicCard);
+        });
+      })
+      .catch(error => console.error('Error loading JSON:', error));
+  </script>
+
+</body>
+</html>

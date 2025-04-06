@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthLink</title>
+  <link rel="stylesheet" href="styless.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">HealthLink</div>
+    <nav>
+      <ul>
+        <li><a href="help.html">Emergency Health Request</a></li>
+        <li><a href="resource.html">Resource Library</a></li>
+        <li><a href="govt-schemes.html">Govt Health Schemes</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1 style="color: black;">Expert Care for Your Health</h1>
+    <p style="color: black;">Discover world-class medical expertise and treatments.</p>
+  </section>
+
+  <section class="info">
+    <div class="card">
+      <h2>Government Health Schemes and NGO </h2>
+      <p>Explore government initiatives for affordable healthcare.</p>
+      <a href="govt-schemes.html" class="btn">View Schemes</a>
+    </div>
+
+    <div class="card" id="resources">
+      <h2>Resource Library</h2>
+      <p>Browse free health materials & video explainers:</p>
+      <div class="resource-buttons">
+        <a href="resource.html" class="btn">Resources</a>
+      </div>
+    </div>
+
+    <div class="card" id="emergency">
+      <h2>Emergency Assistance Request</h2>
+      <p>If you or someone you know needs urgent help, fill the form below.</p>
+      <a href="help.html" class="btn">Request Help</a>
+      <div id="emergency-form" class="hidden">
+        <form onsubmit="handleRequest(event)">
+          <label>Name:<br />
+            <input type="text" id="name" required />
+          </label><br />
+
+          <label>Contact Info:<br />
+            <input type="text" id="contact" required />
+          </label><br />
+
+          <label>Description of Emergency:<br />
+            <textarea id="description" rows="4" required></textarea>
+          </label><br />
+
+          <button type="submit">Submit Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/@denserai/embed-chat@1/dist/web.min.js";
+    Chatbot.init({
+      chatbotId: "5ffd3f6d-8832-418d-8a94-664bcbdec609",
+    });
+  </script>  
+  <iframe
+  width="100%"
+  height="800px"
+  frameborder="0"
+  src="https://denser.ai/u/embed/5ffd3f6d-8832-418d-8a94-664bcbdec609">
+</iframe>
+
+  <footer>
+    <p>&copy; 2025 HealthLink.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

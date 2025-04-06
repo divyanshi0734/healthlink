@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-color: #f9fcff;
+    color: #222;
+  }
+  
+  /* Header */
+  header {
+    background-color: #008080;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    text-decoration: underline;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #caf0f8;
+    text-align: center;
+    padding: 60px 30px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: black;
+  }
+  
+  /* About Section */
+  .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 50px 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+  }
+  
+  .about-text {
+    flex: 1 1 400px;
+    max-width: 600px;
+  }
+  
+  .about-text h2 {
+    color: #0077b6;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .about-text p, .about-text ul {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .about-text ul {
+    padding-left: 20px;
+  }
+  
+  .about-text li {
+    margin-bottom: 8px;
+  }
+  
+  .about-image {
+    flex: 1 1 300px;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #008080;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+  }

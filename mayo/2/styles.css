@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background: #f5f8fa;
+    color: #333;
+  }
+  
+  header {
+    background: #0077b6;
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url("https://source.unsplash.com/1600x600/?hospital,community") center/cover no-repeat;
+    color: white;
+  }
+  
+  .hero button {
+    padding: 10px 20px;
+    background: #00b4d8;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .goals {
+    padding: 60px 40px;
+    background: #fff;
+  }
+  
+  .goals h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .goal-card {
+    background: #e3f2fd;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .resources, .partners {
+    padding: 40px;
+    background: #caf0f8;
+    text-align: center;
+  }
+  
+  .partners ul {
+    list-style: none;
+    padding-top: 10px;
+  }
+  
+  footer {
+    background: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  .card button {
+    background-color: #00b4d8; /* A bold red for urgency */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card button:hover {
+    background-color: #00b4d8;
+  }

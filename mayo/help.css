@@ -1,0 +1,144 @@
+ /* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #f5f8fa;
+  color: #333;
+  line-height: 1.6;
+
+}
+
+
+/* Header */
+header {
+  background: #008080;
+  color: white;
+  padding: 20px 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Emergency Form */
+.emergency h2 {
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+.emergency form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.emergency input, 
+.emergency textarea, 
+.emergency button, 
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.emergency button {
+  background: #00b4d8;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+/* Find Help Section */
+.find-help h2 {
+  color: #008080;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#map {
+  height: 300px;
+  background: #dee2e6;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.help-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.help-options button {
+  padding: 10px 20px;
+  background: #008080;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.help-options button:hover {
+  background: #008080;
+}
+
+/* Footer */
+footer {
+  background: #008080;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  margin-right: 8px;
+}

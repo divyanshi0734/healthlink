@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Health Schemes</title>
+    <link rel="stylesheet" href="govt.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Health Schemes</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="charitable-clinics.html"> Charitable Clinics</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1 class="hero-title">Government Health Schemes and NGO</h1>
+        <p class="hero-description">Affordable healthcare initiatives for all.</p>
+    </section>
+
+    <section class="organizations">
+        <h2>Organizations</h2>
+        <div id="org-list"></div>
+    </section>
+
+    <script>
+        fetch('orgs.json')
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Network response was not ok');
+              }
+              return response.json();
+          })
+          .then(data => {
+              const orgList = document.getElementById('org-list');
+              data.forEach(org => {
+                  const orgDiv = document.createElement('div');
+                  orgDiv.classList.add('org-card');
+                  orgDiv.innerHTML = `
+                      <h3>${org.name}</h3>
+                      <p>${org.description}</p>
+                      <p><strong>Location:</strong> ${org.location}</p>
+                      <p><strong>Contact:</strong> ${org.contact ? org.contact : 'Not Available'}</p>
+                      <p><strong>Website:</strong> <a href="${org.website}" target="_blank">${org.website ? org.website : 'Not Available'}</a></p>
+                  `;
+                  orgList.appendChild(orgDiv);
+              });
+          })
+          .catch(error => {
+              console.error('Error loading JSON:', error);
+              document.getElementById('org-list').textContent = "Failed to load organization data.";
+          });
+    </script>
+
+    <footer>
+        <p>&copy; 2025 Government Health Schemes. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

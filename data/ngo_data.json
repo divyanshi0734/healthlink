@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Medical Relief International",
+        "description": "Provides medical assistance to underserved communities worldwide.",
+        "website": "https://www.example.com/mri"
+    },
+    {
+        "name": "Health Access Fund",
+        "description": "Offers financial assistance to individuals and families struggling with medical expenses.",
+        "website": "https://www.example.com/haf"
+    },
+    {
+        "name": "Community Health Initiative",
+        "description": "Focuses on preventative care and health education in local communities.",
+        "website": "https://www.example.com/chi"
+    }
+]
